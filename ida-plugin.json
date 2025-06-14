@@ -1,0 +1,16 @@
+{
+    "IDAMetadataDescriptorVersion": 1,
+    "plugin": {
+        "name": "renimp",
+        "entryPoint": "renimp.py",
+        "description": "Python implmentation of the renimp.idc script",
+        "version": "1.0.0",
+        "idaVersions": "9.1",
+        "categories": [
+            "malware-analysis",
+            "deobfuscation",
+            "debugging-and-tracing"
+        ],
+        "logoPath": "logo.png"
+    }
+}
