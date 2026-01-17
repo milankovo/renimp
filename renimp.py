@@ -1,5 +1,9 @@
 import idaapi
 import idc
+import logging
+
+logger = logging.getLogger("renimp")
+logger.setLevel(logging.INFO)
 
 
 def rename_pointers(ea1: int, ea2: int):
@@ -73,7 +77,7 @@ class RenimpPluginModule(idaapi.plugin_t):
         addon.name = "renimp"
         addon.producer = "Milankovo"
         addon.url = "https://github.com/milankovo/renimp"
-        addon.version = "1.0"
+        addon.version = "1.0.0"
         idaapi.register_addon(addon)
         return idaapi.PLUGIN_KEEP
 
@@ -86,11 +90,11 @@ class RenimpPluginModule(idaapi.plugin_t):
     def rename_imports(self):
         ok, ea1, ea2 = idaapi.read_range_selection(None)
         if not ok:
-            print("No selection found.")
+            logger.warning("No selection found.")
             return
 
         if ea1 == idaapi.BADADDR or ea2 == idaapi.BADADDR:
-            print("No selection found.")
+            logger.warning("No selection found.")
             return
 
         rename_pointers(ea1, ea2)

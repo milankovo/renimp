@@ -3,14 +3,36 @@
     "plugin": {
         "name": "renimp",
         "entryPoint": "renimp.py",
-        "description": "Python implmentation of the renimp.idc script",
+        "description": "Python implementation of the renimp.idc script",
         "version": "1.0.0",
-        "idaVersions": "9.1",
+        "license": "GPL-3.0",
+        "idaVersions": ">=9.0",
+        "platforms": [
+            "windows-x86_64",
+            "linux-x86_64",
+            "macos-x86_64",
+            "macos-aarch64"
+        ],
         "categories": [
             "malware-analysis",
             "deobfuscation",
             "debugging-and-tracing"
         ],
-        "logoPath": "logo.png"
+        "keywords": [
+            "imports",
+            "malware",
+            "dynamic-imports",
+            "rename",
+            "import-table"
+        ],
+        "urls": {
+            "repository": "https://github.com/milankovo/renimp"
+        },
+        "authors": [
+            {
+                "name": "Milankovo",
+                "email": "renimp@noreply.github.com"
+            }
+        ]
     }
 }
