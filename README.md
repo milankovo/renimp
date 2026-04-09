@@ -1,2 +1,2 @@
 # renimp
-Python implmentation of the renimp.idc script
+Python implmentation of the venerable renimp.idc script
