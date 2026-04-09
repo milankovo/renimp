@@ -39,7 +39,7 @@ def rename_pointers(ea1: int, ea2: int):
             idx += 3
 
         func_name = name[idx + 1 :]
-        idaapi.set_name(ea1, func_name, idaapi.SN_NOCHECK | idaapi.SN_FORCE)
+        idaapi.set_name(ea, func_name, idaapi.SN_NOCHECK | idaapi.SN_FORCE)
 
 
 class renimp_action(idaapi.action_handler_t):
